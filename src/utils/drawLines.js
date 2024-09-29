@@ -17,7 +17,7 @@ export const drawLineBetweenPoints = (x1, y1, x2, y2) => {
     line.style.top = `${y1}px`;
     line.style.height = "2px";
     line.style.position = "absolute";
-    line.style.background = "#0066FF";
+    line.style.background = "blue";
     line.style.transformOrigin = "0 0";
   
 

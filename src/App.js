@@ -3,6 +3,10 @@ import ellipse from './assets/ellipse.svg';
 import './App.css';
 import FunctionCard from './components/FunctionCard';
 import { drawLineBetweenPoints } from './utils/drawLines';  // Import the utility function
+import twoToFour from './assets/2to4.svg'
+import oneToTwo from './assets/1to2.svg'
+import fiveToThree from './assets/5to3.svg'
+import connector from './assets/connect.svg'
 
 function App() {
   const [initialValue, setInitialValue] = useState(2);
@@ -141,6 +145,7 @@ function App() {
   return (
     <div className="app">
       <div className="main-container">
+      
         <div className="initial-value-container" ref={initialValueRef}>
           <div className="initial-value-label-container">
             <span className="initial-value-label">Initial value of x</span>
@@ -153,6 +158,7 @@ function App() {
               <img src={ellipse} alt="ellipse" />
             </div>
           </div>
+          <div style={{width:'20px',border:'1px solid blue',height:'0px',marginTop:'250px'}}></div>
           <FunctionCard
             label='Function: 1'
             equation={equation1}
@@ -185,6 +191,8 @@ function App() {
             nextFunction={"-"}
             ref={function3Ref}
           />
+          <div style={{width:'20px',border:'1px solid blue',height:'0px',marginTop:'250px'}}></div>
+
           <div className="final-output-container" ref={finalOutputRef}>
             <span className="final-output-label">Final Output y</span>
             <div className='y-input-container'>
@@ -217,6 +225,15 @@ function App() {
           ref={function5Ref}
         />
       </div>
+
+      {/* <img style={{position:'absolute',top:"35%",left:'30%',zIndex:99}} src={twoToFour} />
+      <img style={{position:'absolute',top:"35%",left:'30%',zIndex:99}} src={oneToTwo} />
+      <img style={{position:'absolute',top:"78%",left:'43%',zIndex:99}} src={oneToTwo} />
+      <img style={{position:'absolute',top:"33%",left:'70%',zIndex:99}} src={fiveToThree} />
+      <img style={{position:'absolute',top:"33%",left:'10%',zIndex:99}} src={connector} />
+      <img style={{position:'absolute',top:"33%",right:'10%',zIndex:99}} src={connector} /> */}
+      
+      
     </div>
   );
 }
